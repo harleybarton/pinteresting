@@ -14,9 +14,10 @@ group :development, :test do
      gem 'sqlite3'
 end
 
-
-	gem 'rails_12factor', group: :production
-	gem 'pg', group: :production
+group :production do
+	gem 'rails_12factor'
+	gem 'pg'
+end
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
